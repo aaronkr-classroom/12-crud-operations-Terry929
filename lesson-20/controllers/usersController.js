@@ -151,7 +151,7 @@ module.exports = {
    */
   delete: (req, res, next) => {
     let userId = req.params.id; //URL의 매개변수
-    User.findByIdandRemove(userId)
+    User.findByIdAndRemove(userId)
       .then(() => {
         res.locals.redirect = "/users";
         next( );
